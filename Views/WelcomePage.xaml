@@ -1,80 +1,105 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealthCare.Views.WelcomePage"
-             BackgroundColor="#FFF"
-             >
-    <ScrollView VerticalOptions="Center" HorizontalOptions="Center">
-        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="30">
+             BackgroundColor="{OnIdiom Phone=#fff, Desktop=#a1c5c5}">
 
-            <!-- Logo Circular -->
-            <Frame BackgroundColor="White"
-            CornerRadius="75"
-            HeightRequest="250"
-            WidthRequest="250"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Padding="0">
-                <Image Source="logo2.png"
-                HeightRequest="350"
-                WidthRequest="250"
-                Aspect="AspectFit"/>
-            </Frame>
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="{OnIdiom Phone=Center, Desktop=FillAndExpand}" HorizontalOptions="Center" Padding="60" Spacing="25">
+            <!-- Layout para Escritorio -->
+            <OnIdiom x:TypeArguments="View">
+                <OnIdiom.Desktop>
+                    <Grid Padding="20,40" ColumnSpacing="0" RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <!-- Dos columnas: una para el texto y otra para la imagen -->
+                            <ColumnDefinition Width="2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <!-- Dividimos el área principal para que el contenido esté centrado -->
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
 
-            <Border Stroke="#014671"
-            StrokeThickness="2"
-            StrokeShape="RoundRectangle 40,0,0,40"
-            Background="#0084D6"
-            Padding="16,8"
-            HorizontalOptions="Center">
-                <Label Text="UTP HEALTH CARE"
-                TextColor="White"
-                FontSize="34"
-                FontFamily="MohaveRegular"
-                FontAttributes="Bold" />
-            </Border>
+                        <!-- Envolver StackLayout dentro de un Frame para redondear esquinas -->
+                        <Frame CornerRadius="25" Padding="0" HasShadow="True" BorderColor="LightGray" BackgroundColor="White"
+       HorizontalOptions="Center" VerticalOptions="Center">
 
-            <!-- Descripción -->
-            <Label Text=""
-            FontSize="24"
-            FontFamily="MohaveRegular"
-            TextColor="#004D40"
-            HorizontalOptions="Center"
-            Margin="0,10,0,10"/>
-            <Frame BackgroundColor="White"
-    CornerRadius="75"
-    HeightRequest="150"
-    WidthRequest="150"
-    HorizontalOptions="Center"
-    VerticalOptions="Center"
-    Padding="0">
-                <Image Source="doctol.png"
-        HeightRequest="140"
-        WidthRequest="140"
-        Aspect="AspectFit"/>
-            </Frame>
+                            <!-- Columna 1: Sección de Texto -->
+                            <StackLayout Grid.Column="0" HorizontalOptions="Center" Padding="10" BackgroundColor="Transparent">
 
-            <Label Text="Lo mejor para una vida universitaria sana"
-            FontSize="18"
-            FontFamily="MohaveRegular"
-            TextColor="#000000"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            Margin="0,10,0,20"/>
+                                <!-- Logo Circular -->
+                                <Frame BackgroundColor="White" CornerRadius="75"
+                                    HeightRequest="150" WidthRequest="150"
+                                    BorderColor="white"
+                                    HorizontalOptions="Start" VerticalOptions="Center" Padding="0">
+                                    <Image Source="logo2.png" Aspect="AspectFit"/>
+                                </Frame>
 
-            <!-- Botón con Icono (Al final me rendí con el icono, queda a futuro) -->
-            <Button Text="Nuestros Servicios"
-             BackgroundColor="#014671"
-             TextColor="White"
-             FontSize="25"
-             FontFamily="MohaveRegular"
-             Padding="10"
-             CornerRadius="25"
-             HeightRequest="70"
-             WidthRequest="300"
-             HorizontalOptions="Center"
-             Clicked="ParaServicios">
-            </Button>
+                                <!-- Título -->
+                                <Label Text="Bienvenido a UTP Health Care"
+               FontSize="36" FontFamily="MohaveRegular" TextColor="#000"
+               HorizontalOptions="Start" VerticalOptions="Center"/>
+
+                                <!-- Descripción -->
+                                <Label Text="Aquí encontrarás todo lo que necesitas para tu salud universitaria. Conoce más sobre nuestros servicios."
+               FontSize="20" FontFamily="MohaveRegular" TextColor="#000"
+               Margin="0,20,100,20" HorizontalOptions="Start"/>
+
+                                <!-- Botón -->
+                                <Button Text="Nuestros Servicios" BackgroundColor="#014671" TextColor="White"
+                FontSize="25" FontFamily="MohaveRegular" Padding="10"
+                CornerRadius="25" HeightRequest="70" WidthRequest="300"
+                HorizontalOptions="Start" Clicked="ParaServicios"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <!-- Columna 2: Imagen -->
+                        <Image Grid.Column="1" Source="doctol.png" 
+                           HeightRequest="300" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
+                    </Grid>
+                </OnIdiom.Desktop>
+            </OnIdiom>
+
+            <!-- Layout para Móvil -->
+            <OnIdiom x:TypeArguments="View">
+                <OnIdiom.Phone>
+                    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0" Spacing="25">
+
+                        <!-- Logo Circular -->
+                        <Frame BackgroundColor="White" CornerRadius="75"
+                   HeightRequest="150" WidthRequest="150"
+                   BorderColor="white"
+                   HorizontalOptions="Center" VerticalOptions="Center" Padding="0">
+                            <Image Source="logo2.png" Aspect="AspectFit"/>
+                        </Frame>
+
+                        <Border Stroke="#014671" StrokeThickness="2" StrokeShape="RoundRectangle 40,0,0,40"
+                    Background="#0084D6" Padding="16,8" HorizontalOptions="Center">
+                            <Label Text="UTP HEALTH CARE" TextColor="White" FontSize="34"
+                       FontFamily="MohaveRegular" FontAttributes="Bold"/>
+                        </Border>
+
+                        <!-- Icono Doctol -->
+                        <Frame BackgroundColor="White" CornerRadius="75" HeightRequest="200" WidthRequest="200"
+                   BorderColor="white"
+                   HorizontalOptions="Center" VerticalOptions="Center" Padding="0">
+                            <Image Source="doctol.png" HeightRequest="200" WidthRequest="200" Aspect="AspectFit"/>
+                        </Frame>
+
+                        <Label Text="Lo mejor para una vida universitaria sana" FontSize="30" 
+                   FontFamily="MohaveRegular" TextColor="#000" HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" Margin="0,10,0,20"/>
+
+                        <!-- Botón Servicios -->
+                        <Button Text="Nuestros Servicios" BackgroundColor="#014671" TextColor="White"
+                    FontSize="25" FontFamily="MohaveRegular" Padding="10"
+                    CornerRadius="25" HeightRequest="70" WidthRequest="300"
+                    HorizontalOptions="Center" Clicked="ParaServicios"/>
+
+                    </VerticalStackLayout>
+                </OnIdiom.Phone>
+            </OnIdiom>
+
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
+

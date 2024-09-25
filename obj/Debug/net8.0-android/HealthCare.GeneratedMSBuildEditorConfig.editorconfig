@@ -12,77 +12,89 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HealthCare
-build_property.ProjectDir = C:\Users\Gio\Desktop\HealthCare\UTPhealthCenter\
+build_property.ProjectDir = C:\Users\Kris\source\repos\GithubUTPhealthCare\UTPhealthCenter\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/App.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/AppShell.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/MainPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Components/Navbar.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Components.Navbar.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\Navbar.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\Navbar.xaml
+
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Components/SideMenu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Components.SideMenu.xaml
+build_metadata.AdditionalFiles.TargetPath = Components\SideMenu.xaml
+build_metadata.AdditionalFiles.RelativePath = Components\SideMenu.xaml
+
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Resources/Styles/Colors.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Resources/Styles/Styles.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/AdminRegisterPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/AdminRegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.AdminRegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\AdminRegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\AdminRegisterPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/CitasPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/CitasPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.CitasPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\CitasPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CitasPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/LoginPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/ProfilePage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.ProfilePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ProfilePage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ProfilePage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/ServicesPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/ServicesPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.ServicesPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\ServicesPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\ServicesPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/StudentRegisterPage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/StudentRegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.StudentRegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\StudentRegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\StudentRegisterPage.xaml
 
-[C:/Users/Gio/Desktop/HealthCare/UTPhealthCenter/Views/WelcomePage.xaml]
+[C:/Users/Kris/source/repos/GithubUTPhealthCare/UTPhealthCenter/Views/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = HealthCare.Views.WelcomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\WelcomePage.xaml

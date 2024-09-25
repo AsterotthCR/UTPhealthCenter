@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthCare.Components.Navbar"
+             Padding="10"
+             HeightRequest="130"
+             x:Name="navbar">
+    <Frame BackgroundColor="#F5F5F5" 
+           CornerRadius="15"
+           HasShadow="True"
+           Padding="10"
+           Margin="0,5">
+
+        <Grid Padding="10" ColumnDefinitions="Auto,*,Auto">
+            <!-- Logo e ícono de la barra -->
+            <HorizontalStackLayout VerticalOptions="Center" Grid.Column="0">
+                <Frame BackgroundColor="White" CornerRadius="75"
+                HeightRequest="100" WidthRequest="100"
+                BorderColor="white"
+                HorizontalOptions="Start" VerticalOptions="Center" Padding="0">
+                    <Image Source="logo.png" Aspect="AspectFit"/>
+                </Frame>
+                <Label Text="UTP Health Care"
+               FontSize="28"
+               FontFamily="MohaveRegular"
+               FontAttributes="Bold"
+               TextColor="#000"
+               VerticalOptions="Center"
+               Margin="10,0,0,0"/>
+            </HorizontalStackLayout>
+
+            <!-- Menú de navegación -->
+            <HorizontalStackLayout Grid.Column="1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Spacing="20">
+                <Button Text="INICIO" BackgroundColor="Transparent" FontSize="28" TextColor="#000" FontFamily="MohaveRegular" Clicked="WelcomePage" />
+                <Button Text="SERVICIOS" BackgroundColor="Transparent" FontSize="28" TextColor="#000" FontFamily="MohaveRegular" Clicked="ServicePage"/>
+                <Button Text="CITAS" BackgroundColor="Transparent" FontSize="28" TextColor="#000" FontFamily="MohaveRegular" />
+                <Button Text="REGISTROS" BackgroundColor="Transparent" FontSize="28" TextColor="#000" FontFamily="MohaveRegular" />
+            </HorizontalStackLayout>
+
+            <!-- Perfil de usuario -->
+            <HorizontalStackLayout Grid.Column="2"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center">
+                <Label Text="Dr. User" FontSize="25" TextColor="#000" FontFamily="MohaveRegular" VerticalOptions="Center"/>
+                <ImageButton Source="perfil.png" HeightRequest="30" WidthRequest="30" Margin="10,0,0,0"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Frame>
+
+    
+</ContentView>

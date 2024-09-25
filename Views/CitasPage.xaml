@@ -2,78 +2,189 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:HealthCare.ViewModel"
+             xmlns:components="clr-namespace:HealthCare.Components"
              x:Class="HealthCare.Views.CitasPage"
-             BackgroundColor="#FFFFFF">
+             BackgroundImageSource="fondete.jpeg">
 
     <ContentPage.BindingContext>
         <vm:PatientAppointmentViewModel />
     </ContentPage.BindingContext>
 
-    <VerticalStackLayout Padding="10">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <components:Navbar IsVisible="{OnIdiom Desktop=true, Phone=false, Tablet=false}" />
+            <components:SideMenu IsVisible="{OnIdiom Desktop=false, Phone=true, Tablet=true}" />
+            <!-- Título (Se adapta según la plataforma) -->
+            <Label Text="Gestión de Citas" 
+                   FontFamily="MohaveRegular"
+                   FontAttributes="Bold,Italic"
+                   TextColor="#000" 
+                   HorizontalOptions="Center"
+                   FontSize="{OnIdiom Phone=29, Desktop=24}" />
 
-        <!-- Botones de navegación -->
-        <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
-            <Button Text="Citas Pendientes" Clicked="ShowPendingCitas" BackgroundColor="#014671" TextColor="White" FontSize="25" />
-            <Button Text="Citas Programadas" Clicked="ShowScheduledCitas" BackgroundColor="#014671" TextColor="White" FontSize="25" />
-            <Button Text="Agregar Cita" Clicked="ShowAppointmentForm" BackgroundColor="#014671" TextColor="White" FontSize="25" />
-        </HorizontalStackLayout>
+            <!-- Botones de navegación -->
+            <OnIdiom x:TypeArguments="Layout">
+                <OnIdiom.Phone>
+                    <!-- Diseño para móviles (StackLayout vertical) -->
+                    <VerticalStackLayout HorizontalOptions="Fill" Spacing="15">
+                        <Button Text="Citas Pendientes" 
+                                Clicked="ShowPendingCitas" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                FontFamily="MohaveRegular"
+                                CornerRadius="10" />
+                        <Button Text="Citas Programadas" 
+                                Clicked="ShowScheduledCitas" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                FontFamily="MohaveRegular"
+                                CornerRadius="10" />
+                        <Button Text="Agregar Cita" 
+                                Clicked="ShowAppointmentForm" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                FontFamily="MohaveRegular"
+                                CornerRadius="10" />
+                    </VerticalStackLayout>
+                </OnIdiom.Phone>
 
-        <!-- Citas Pendientes -->
-        <VerticalStackLayout x:Name="PendingCitasSection" IsVisible="True" Padding="20">
-            <Label Text="Citas Pendientes" FontSize="24" FontAttributes="Bold" />
-            <CollectionView ItemsSource="{Binding PendingAppointments}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="10">
-                            <HorizontalStackLayout>
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding PatientName}" FontSize="18" />
-                                    <Label Text="{Binding Description}" FontSize="16" />
-                                </VerticalStackLayout>
-                                <Button Text="✖" BackgroundColor="#E53935" TextColor="White" CornerRadius="10" Command="{Binding BindingContext.DeleteAppointmentCommand, Source={x:Reference CitasPage}}" CommandParameter="{Binding}" />
-                            </HorizontalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+                <OnIdiom.Desktop>
+                    <!-- Diseño para escritorio (Grid con botones alineados horizontalmente) -->
+                    <Grid ColumnDefinitions="*,*,*" 
+                          Padding="0" 
+                          ColumnSpacing="10">
+                        <Button Text="Citas Pendientes" 
+                                Clicked="ShowPendingCitas" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                CornerRadius="10"
+                                Grid.Column="0"/>
+                        <Button Text="Citas Programadas" 
+                                Clicked="ShowScheduledCitas" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                CornerRadius="10"
+                                Grid.Column="1"/>
+                        <Button Text="Agregar Cita" 
+                                Clicked="ShowAppointmentForm" 
+                                BackgroundColor="#014671" 
+                                TextColor="White" 
+                                FontSize="20"
+                                CornerRadius="10"
+                                Grid.Column="2"/>
+                    </Grid>
+                </OnIdiom.Desktop>
+            </OnIdiom>
+
+            <!-- Citas Pendientes -->
+            <VerticalStackLayout x:Name="PendingCitasSection" IsVisible="True" Padding="30" >
+                <Label Text="Citas Pendientes" 
+                       FontFamily="MohaveRegular"
+                       FontAttributes="Bold" 
+                       TextColor="#000"
+                       FontSize="{OnIdiom Phone=22, Desktop=24}" />
+
+                <CollectionView ItemsSource="{Binding PendingAppointments}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#E3F2FD" 
+                                   CornerRadius="10" 
+                                   Padding="20" 
+                                   Margin="0,5"
+                                   BorderColor="#00000020">
+                                <Grid ColumnDefinitions="*, Auto">
+                                    <VerticalStackLayout Grid.Column="0" Spacing="5" HorizontalOptions="StartAndExpand">
+                                        <Label Text="Paciente:" FontSize="{OnIdiom Phone=18, Desktop=20}" TextColor="#000" FontFamily="MohaveRegular" TextDecorations="Underline"/>
+                                        <Label Text= "{Binding patientName}" FontSize="{OnIdiom Phone=16, Desktop=18}" TextColor="#000" FontFamily="MohaveRegular"/>
+                                        <Label Text="Doctor:" FontSize="{OnIdiom Phone=18, Desktop=20}" TextColor="#000" FontFamily="MohaveRegular" TextDecorations="Underline"/>
+                                        <Label Text="{Binding doctorName}" FontSize="{OnIdiom Phone=16, Desktop=18}" TextColor="#000"/>
+                                        <Label Text="Asunto:" FontSize="{OnIdiom Phone=18, Desktop=20}" TextColor="#000" FontFamily="MohaveRegular" TextDecorations="Underline"/>
+                                        <Label Text="{Binding description}" FontSize="{OnIdiom Phone=14, Desktop=16}" TextColor="#000"/>
+                                        <Label Text="Fecha Programada:" FontSize="{OnIdiom Phone=18, Desktop=20}" TextColor="#000" FontFamily="MohaveRegular" TextDecorations="Underline"/>
+                                        <Label Text="{Binding AppointmentDate}" FontSize="{OnIdiom Phone=14, Desktop=16}" TextColor="#000"/>
+                                    </VerticalStackLayout>
+                                    <Button Grid.Column="1"
+                                            Text="✖" 
+                                            BackgroundColor="#E53935" 
+                                            TextColor="White" 
+                                            CornerRadius="10"
+                                            Command="{Binding BindingContext.DeleteAppointmentCommand, Source={x:Reference CitasPage}}"
+                                            CommandParameter="{Binding}" 
+                                            WidthRequest="{OnIdiom Phone=80, Desktop=60}" 
+                                            HeightRequest="{OnIdiom Phone=80, Desktop=100}" 
+                                            HorizontalOptions="End"
+                                            Clicked="OnDeleteAppointment"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!-- Formulario de Crear Cita -->
+            <VerticalStackLayout x:Name="AppointmentFormSection" IsVisible="False">
+                <Label Text="Crear Cita" 
+                       FontFamily="MohaveRegular"
+                       FontAttributes="Bold" 
+                       TextColor="#000"
+                       FontSize="{OnIdiom Phone=22, Desktop=30}" />
+
+                <Entry Placeholder="ID del Paciente" 
+                       Text="{Binding NewAppointment.patientId}" 
+                       Keyboard="Numeric" 
+                       TextColor="Black" 
+                       FontFamily="MohaveRegular"
+                       BackgroundColor="#E3F2FD" 
+                       FontSize="{OnIdiom Phone=22, Desktop=25}"
+                       PlaceholderColor="#000" />
+
+                <Entry Placeholder="ID del Doctor" 
+                       Text="{Binding NewAppointment.doctorId}" 
+                       Keyboard="Numeric" 
+                       TextColor="Black" 
+                       FontFamily="MohaveRegular"
+                       BackgroundColor="#E3F2FD" 
+                       FontSize="{OnIdiom Phone=22, Desktop=25}"
+                       PlaceholderColor="#000" />
+
+                <DatePicker Date="{Binding NewAppointment.AppointmentDate}" 
+                             TextColor="Black" 
+                             FontFamily="MohaveRegular"
+                             BackgroundColor="#E3F2FD" 
+                             FontSize="{OnIdiom Phone=22, Desktop=25}" />
+
+                <Entry Placeholder="Descripción" 
+                       Text="{Binding NewAppointment.description}" 
+                       TextColor="Black" 
+                       FontFamily="MohaveRegular"
+                       BackgroundColor="#E3F2FD" 
+                       FontSize="{OnIdiom Phone=22, Desktop=25}"
+                       PlaceholderColor="#000" />
+
+                <Picker Title="Seleccione tipo de cita:" 
+                        ItemsSource="{Binding AppointmentTypes}" 
+                        SelectedItem="{Binding NewAppointment.type}" 
+                        TitleColor="#000"
+                        TextColor="#000"
+                        FontFamily="MohaveRegular"
+                        BackgroundColor="#E3F2FD" 
+                        FontSize="{OnIdiom Phone=22, Desktop=25}"
+                        />
+
+                <Button Text="Guardar Cita" 
+                        Clicked="OnSaveAppointment" 
+                        BackgroundColor="#014671" 
+                        TextColor="White" 
+                        CornerRadius="10" 
+                        FontSize="{OnIdiom Phone=18, Desktop=20}"
+                        Margin="0,15,0,0"/>
+            </VerticalStackLayout>
+
         </VerticalStackLayout>
-
-        <!-- Citas Programadas -->
-        <VerticalStackLayout x:Name="ScheduledCitasSection" IsVisible="False" Padding="20">
-            <Label Text="Citas Programadas" FontSize="24" FontAttributes="Bold" />
-            <CollectionView ItemsSource="{Binding ScheduledAppointments}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="#E3F2FD" CornerRadius="10" Padding="10">
-                            <HorizontalStackLayout>
-                                <VerticalStackLayout>
-                                    <Label Text="{Binding PatientName}" FontSize="18" />
-                                    <Label Text="{Binding Description}" FontSize="16" />
-                                </VerticalStackLayout>
-                                <Button Text="✖" BackgroundColor="#E53935" TextColor="White" CornerRadius="10" Clicked="OnDeleteAppointment" CommandParameter="{Binding}" />
-                            </HorizontalStackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
-
-        <!-- Formulario para agregar citas -->
-        <VerticalStackLayout x:Name="AppointmentFormSection" IsVisible="False" Padding="20">
-            <Label Text="Crear Cita" FontSize="24" FontAttributes="Bold" TextColor="Black" />
-
-            <!-- Campo Patient ID -->
-            <Entry Placeholder="ID del Paciente" Text="{Binding NewAppointment.PatientId}" TextColor="Black" />
-
-            <!-- Campo Appointment Date -->
-            <DatePicker Date="{Binding NewAppointment.AppointmentDate}" TextColor="Black" />
-
-            <!-- Campo Descripción -->
-            <Entry Placeholder="Descripción" Text="{Binding NewAppointment.Description}" TextColor="Black" />
-
-            <!-- Botón para Guardar -->
-            <Button Text="Guardar Cita" Clicked="OnSaveAppointment" Command="{Binding SaveAppointmentCommand}" TextColor="White" BackgroundColor="#014671"/>
-        </VerticalStackLayout>
-
-    </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\",
+  "WorkspaceRootPath": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\gio\\desktop\\healthcare\\utphealthcenter\\viewmodel\\patientappointmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:viewmodel\\patientappointmentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\views\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:views\\welcomepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\gio\\desktop\\healthcare\\utphealthcenter\\views\\citaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\components\\sidemenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:components\\sidemenu.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\views\\citaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:views\\citaspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\gio\\desktop\\healthcare\\utphealthcenter\\views\\citaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\views\\citaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:views\\citaspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\views\\servicespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:views\\servicespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|c:\\users\\kris\\source\\repos\\githubutphealthcare\\utphealthcenter\\components\\navbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4F4AABB1-96B0-4368-9E7F-A1D6F1B2DCD4}|HealthCare.csproj|solutionrelative:components\\navbar.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,41 +42,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PatientAppointmentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\ViewModel\\PatientAppointmentViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\PatientAppointmentViewModel.cs",
-              "ToolTip": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\ViewModel\\PatientAppointmentViewModel.cs",
-              "RelativeToolTip": "ViewModel\\PatientAppointmentViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T20:32:48.529Z",
+              "DocumentIndex": 1,
+              "Title": "SideMenu.xaml",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Components\\SideMenu.xaml",
+              "RelativeDocumentMoniker": "Components\\SideMenu.xaml",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Components\\SideMenu.xaml",
+              "RelativeToolTip": "Components\\SideMenu.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-25T06:35:34.422Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CitasPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml",
-              "RelativeDocumentMoniker": "Views\\CitasPage.xaml",
-              "ToolTip": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml",
-              "RelativeToolTip": "Views\\CitasPage.xaml",
-              "ViewState": "AgIAACoAAAAAAAAAAAAYwEEAAABvAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WelcomePage.xaml",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\WelcomePage.xaml",
+              "RelativeDocumentMoniker": "Views\\WelcomePage.xaml",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\WelcomePage.xaml",
+              "RelativeToolTip": "Views\\WelcomePage.xaml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-09-18T17:00:03.707Z",
+              "WhenOpened": "2024-09-25T03:49:33.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "CitasPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml",
+              "RelativeDocumentMoniker": "Views\\CitasPage.xaml",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml",
+              "RelativeToolTip": "Views\\CitasPage.xaml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA8AAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-24T15:37:02.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CitasPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\CitasPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Gio\\Desktop\\HealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\CitasPage.xaml.cs",
               "RelativeToolTip": "Views\\CitasPage.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAA4wDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwFoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T16:59:15.865Z",
+              "WhenOpened": "2024-09-25T05:11:01.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Navbar.xaml",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Components\\Navbar.xaml",
+              "RelativeDocumentMoniker": "Components\\Navbar.xaml",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Components\\Navbar.xaml",
+              "RelativeToolTip": "Components\\Navbar.xaml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-25T04:27:44.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServicesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\ServicesPage.xaml",
+              "RelativeDocumentMoniker": "Views\\ServicesPage.xaml",
+              "ToolTip": "C:\\Users\\Kris\\source\\repos\\GithubUTPhealthCare\\UTPhealthCenter\\Views\\ServicesPage.xaml",
+              "RelativeToolTip": "Views\\ServicesPage.xaml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABUAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-24T15:04:00.257Z",
               "EditorCaption": ""
             }
           ]
